@@ -4,7 +4,7 @@
   --primary: #0d6efd;
   --dark: #21252f;
   --body: #888;
-  --boxshadow: 0 8px 22px rgba(0, 0, 0, 0, 1);
+  --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -27,6 +27,10 @@ h6,
 a {
   color: var(--dark);
   text-decoration: none;
+}
+
+.navbar {
+  box-shadow: var(--box-shadow);
 }
 
 .navbar .logo {
@@ -67,4 +71,69 @@ a {
 section {
   padding-top: 120px;
   padding-bottom: 120px;
+}
+
+.card-effect {
+  box-shadow: var(--box-shadow);
+  background-color: #fff;
+  padding: 25px;
+  transition: all 0.35s ease;
+}
+
+.card-effect:hover {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.iconbox {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  color: white;
+  font-size: 32px;
+  border-radius: 100px;
+}
+
+.service {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.service::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: var(--primary);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.service:hover h5,
+.service:hover p {
+  color: white;
+}
+
+.service:hover .iconbox {
+  background-color: #fff;
+  color: var(--primary);
+}
+
+.service:hover::after {
+  opacity: 1;
+  top: 0;
+}
+
+/* features section */
+.col-img {
+  background-image: url(/img/cover2.jpg);
+  background-position: center;
+  background-size: cover; /* 画像の全部を収めることができる。 */
+  min-height: 500px;
 }
