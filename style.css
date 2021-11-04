@@ -4,6 +4,7 @@
   --primary: #0d6efd;
   --dark: #21252f;
   --body: #888;
+  /* --orange: rgb(221, 155, 94); */
   --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 }
 
@@ -44,6 +45,10 @@ img {
 .navbar .nav-link {
   font-size: 14px;
   font-weight: 700;
+}
+
+.navbar .nav-link {
+  color: #fff !important;
 }
 
 .btn {
