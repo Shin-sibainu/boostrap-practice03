@@ -37,7 +37,7 @@ img {
   box-shadow: var(--box-shadow);
 }
 
-.navbar .logo {
+.logo {
   width: 160px;
 }
 
@@ -225,4 +225,22 @@ form .form-control {
   border: transparent;
   border-radius: 0;
   background-color: rgba(0, 0, 0, 0.04);
+}
+
+.footer-top {
+  padding-bottom: 90px;
+  padding: 90px;
+  background-color: var(--dark);
+}
+
+.footer-top a {
+  color: var(--body);
+}
+
+.footer-top a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  background-color: #242933;
 }
